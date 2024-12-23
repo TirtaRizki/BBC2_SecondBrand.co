@@ -17,12 +17,13 @@ const config: Config = {
   plugins: [require("daisyui")],
   daisyui: {
     themes: true,
-    darkTheme: "dark", 
-    base: true, 
-    styled: true, 
-    utils: true, 
-    prefix: "", 
+    darkTheme: "dark",
+    base: true,
+    styled: true,
+    utils: true,
+    prefix: "",
     logs: true,
   },
 };
+
 export default config;
