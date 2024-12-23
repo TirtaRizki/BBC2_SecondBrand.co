@@ -12,7 +12,7 @@ export default function RootLayout({
       <body className="flex h-screen bg-gray-100">
         {/* Sidebar */}
         <aside className="w-64 bg-gray-900 text-white">
-          <div className="p-4 text-lg font-bold">Admin Panel</div>
+          <div className="p-4 text-lg font-bold">Admin SecondBrand</div>
           <nav>
             <ul className="space-y-2">
               <li>
