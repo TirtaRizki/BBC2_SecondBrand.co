@@ -1,5 +1,6 @@
 // app/layout.tsx
-import './globals.css';
+import "./globals.css";
+import Link from "next/link";
 
 export default function RootLayout({
   children,
@@ -15,12 +16,12 @@ export default function RootLayout({
           <nav>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="block py-2 px-4 hover:bg-gray-700 rounded-md"
                 >
                   🕒 Dashboard
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -40,7 +41,7 @@ export default function RootLayout({
               </li>
               <li>
                 <a
-                  href="#"
+                  href="users"
                   className="block py-2 px-4 hover:bg-gray-700 rounded-md"
                 >
                   👥 Users
@@ -48,7 +49,7 @@ export default function RootLayout({
               </li>
               <li>
                 <a
-                  href="#"
+                  href="testimonials"
                   className="block py-2 px-4 hover:bg-gray-700 rounded-md"
                 >
                   💬 Testimonials
@@ -56,10 +57,10 @@ export default function RootLayout({
               </li>
               <li>
                 <a
-                  href="#"
+                  href="settings"
                   className="block py-2 px-4 hover:bg-gray-700 rounded-md"
                 >
-                  ⚙️ Settings
+                  ⚙ Settings
                 </a>
               </li>
             </ul>
