@@ -8,19 +8,18 @@ const SettingsPage = () => {
     storeName: '',
     contactEmail: '',
     phoneNumber: '',
-    address: '',
+    address: ''
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setStoreSettings(prevState => ({ ...prevState, [name]: value }));
+    setStoreSettings((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
-      // Simpan data ke backend atau API endpoint
       const response = await fetch('/api/save-settings', {
         method: 'POST',
         headers: {
@@ -28,12 +27,10 @@ const SettingsPage = () => {
         },
         body: JSON.stringify(storeSettings)
       });
-      
+
       if (response.ok) {
-        // Berhasil menyimpan data
         alert('Settings saved successfully!');
       } else {
-        // Gagal menyimpan data
         alert('Failed to save settings. Please try again.');
       }
     } catch (error) {
